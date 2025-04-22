@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,21 +10,148 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <meta property="og:title" content="kribi-sea-escape-web" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
-
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Navigation -->
+      <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md py-4">
+        <div class="container mx-auto px-4">
+          <div class="flex items-center justify-between">
+            <a href="/" class="text-2xl font-bold text-primary font-serif">
+              Kribi<span class="text-ocean">Escape</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+              <a href="#accueil" class="nav-link">Accueil</a>
+              <a href="#produits" class="nav-link">Produits de la mer</a>
+              <a href="#destinations" class="nav-link">Destinations</a>
+              <a href="#experiences" class="nav-link">Expériences</a>
+              <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="btn-primary hidden md:block">
+              Réserver maintenant
+            </button>
+            <button class="md:hidden menu-toggle">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section id="accueil" class="relative min-h-screen flex items-center pt-16">
+        <div class="absolute inset-0 z-0">
+          <img src="images/hero-bg.jpg" alt="Plage de Kribi" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+          <div class="max-w-2xl text-white">
+            <h1 class="font-serif font-bold text-4xl md:text-6xl leading-tight mb-6">
+              Découvrez les trésors cachés de <span class="text-ocean-light">Kribi</span>
+            </h1>
+            <p class="text-lg md:text-xl opacity-90 mb-8">
+              Explorez les richesses maritimes et les sites méconnus du littoral camerounais.
+              Une expérience authentique et inoubliable vous attend.
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+              <button class="btn-primary">Explorer nos offres</button>
+              <button class="btn-outline">En savoir plus</button>
+            </div>
+          </div>
+        </div>
+        <div class="wave-animation"></div>
+      </section>
+
+      <!-- Products Section -->
+      <section id="produits" class="py-20 bg-gradient-to-b from-white to-foliage-light">
+        <div class="container mx-auto px-4">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="font-serif font-bold text-3xl md:text-4xl mb-4">
+              Les <span class="text-ocean">trésors</span> de notre mer
+            </h2>
+            <p class="text-gray-600 text-lg">
+              Découvrez les produits frais que nous proposons, pêchés directement dans les eaux cristallines de Kribi.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="products-grid">
+            <!-- Products will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Destinations Section -->
+      <section id="destinations" class="py-20 bg-ocean/5">
+        <div class="container mx-auto px-4">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="font-serif font-bold text-3xl md:text-4xl mb-4">
+              Destinations <span class="text-ocean">inédites</span>
+            </h2>
+            <p class="text-gray-600 text-lg">
+              Explorez les sites méconnus de Kribi et vivez des expériences authentiques loin des sentiers battus.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8" id="destinations-grid">
+            <!-- Destinations will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="py-20 bg-sand-light">
+        <div class="container mx-auto px-4">
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="font-serif font-bold text-3xl md:text-4xl mb-4">
+              Ce que disent nos <span class="text-ocean">visiteurs</span>
+            </h2>
+            <p class="text-gray-600 text-lg">
+              Découvrez les expériences authentiques vécues par nos clients lors de leur séjour à Kribi.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="testimonials-grid">
+            <!-- Testimonials will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="relative py-20">
+        <div class="absolute inset-0 z-0">
+          <img src="images/contact-bg.jpg" alt="Contact background" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-ocean/90"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+          <div class="max-w-3xl mx-auto text-center text-white">
+            <h2 class="font-serif font-bold text-3xl md:text-5xl mb-6">
+              Prêt à vivre l'aventure Kribi ?
+            </h2>
+            <p class="text-white/90 text-lg md:text-xl mb-10">
+              Réservez votre expérience dès maintenant et bénéficiez de 15% de réduction sur votre première visite.
+            </p>
+            <form id="contact-form" class="bg-white/10 backdrop-blur-sm p-8 rounded-xl">
+              <!-- Form will be handled by JavaScript -->
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Footer content will be inserted by JavaScript -->
+          </div>
+          <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+            <p>&copy; <span id="current-year"></span> Kribi Sea Escape. Tous droits réservés.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>

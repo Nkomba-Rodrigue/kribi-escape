@@ -1,0 +1,52 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --primary: 200 82% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 25 91% 91%;
+    --secondary-foreground: 20 10% 20%;
+    --ocean: 200 82% 45%;
+    --ocean-dark: 200 82% 35%;
+    --ocean-light: 200 82% 85%;
+    --sand: 25 91% 91%;
+    --sand-light: 25 91% 96%;
+    --foliage: 90 80% 75%;
+    --foliage-light: 90 80% 95%;
+  }
+
+  body {
+    @apply font-sans text-foreground bg-background;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply font-medium text-gray-700 hover:text-primary transition-colors;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-ocean-dark text-white px-6 py-2 rounded-lg transition-colors font-medium;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-2 border-white text-white hover:bg-white/20 px-6 py-2 rounded-lg transition-colors font-medium;
+  }
+
+  .product-card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden;
+  }
+
+  .destination-card {
+    @apply relative rounded-xl overflow-hidden shadow-lg group;
+  }
+
+  .testimonial-card {
+    @apply bg-white rounded-xl shadow-lg p-6 relative;
+  }
+}
